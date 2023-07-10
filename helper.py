@@ -28,8 +28,14 @@ def declare_winner(player, comp):
     """
     choice = player + comp
 
-    with open("find_winner.json", "r") as f:
-        combinations = json.load(f)
+    combinations = {
+        "rp" : "Computer",
+        "ps" : "Computer",
+        "sr" : "Computer",
+        "rs" : "Player",
+        "pr" : "Player",
+        "sp" : "Player"
+    }
 
     try:
         winner = combinations[choice]
