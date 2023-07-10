@@ -44,6 +44,19 @@ def declare_winner(player, comp):
 
     return winner
 
+def final_score():
+    with open('logs.json', 'r') as fp:
+        data = json.load(fp)
+
+    pscore, cscore = data["Player"], data["Computer"]
+
+    if pscore > cscore:
+        print("Player wins!")
+    elif cscore > pscore:
+        print("Computer wins!")
+    else:
+        print("The game has ended in a tie.")
+
 def clean_logs():
     """
     Cleans the logs file before the start of the game.

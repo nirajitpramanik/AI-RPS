@@ -45,4 +45,5 @@ print("Rock, Paper, Scissor game")
 clean_logs()
 for i in range(10):
     current_round()
+final_score()
 find_ai_accuracy()
